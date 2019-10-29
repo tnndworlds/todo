@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewTemplate>
+    <module>
+        <name>CycleTasks</name>
+        <contents>
+            <content>
+                <key>data</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT * FROM XS_DD_TASK WHERE USER_ID='${userId}' ;
+					]]>
+                </value>
+                <dataAdapter></dataAdapter>
+            </content>
+        </contents>
+    </module>
+
+    <module>
+        <name>TagsTask</name>
+        <contents>
+            <content>
+                <key>data</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT * FROM XS_DD_TAGS WHERE USER_ID='${userId}' ;
+					]]>
+                </value>
+                <dataAdapter></dataAdapter>
+            </content>
+        </contents>
+    </module>
+</viewTemplate>

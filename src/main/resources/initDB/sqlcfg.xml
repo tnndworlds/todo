@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sqls>
+    <!-- 重建数据库 Start -->
+    <sql>
+        <name>createTble</name>
+        <order>1</order>>
+        <sqlpath>/initDB/createTbl.sql</sqlpath>
+    </sql>
+
+    <sql>
+        <name>initSQL</name>
+        <order>2</order>>
+        <sqlpath>/initDB/init.sql</sqlpath>
+    </sql>
+</sqls>

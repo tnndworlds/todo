@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewTemplate>
+    <module>
+        <name>PunchCFG</name>
+        <contents>
+            <content>
+                <key>dayPunchTags</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT NAME FROM XS_DD_TAGS WHERE USER='${userId}';
+					]]>
+                </value>
+                <dataAdapter>com.mailang.tquery.dataadapter.RecordToListAdapter:NAME</dataAdapter>
+            </content>
+        </contents>
+    </module>
+</viewTemplate>

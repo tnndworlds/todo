@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewTemplate>
+    <module>
+        <name>Goals</name>
+        <contents>
+            <content>
+                <key>data</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT T1.*, validDay(T2.TYPE, T2.PARAM) AS dayValid, IF(T3.ID IS NULL,0,1) AS TODO, T3.ID AS punchId
+                        FROM XS_DD_GOAL T1
+                        LEFT JOIN xs_dd_strategy T2 ON T1.STRATEGY = CONCAT('[', T2.ID, ']')
+                        LEFT JOIN xs_dd_punch T3 ON T3.PUNCH_DATE = date_format(now(), '%Y%m%d') AND T1.ID=T3.TASK_ID
+                        WHERE T1.USER_ID = '${userId}'
+                        ORDER BY T1.UPDATE_TIME
+					]]>
+                </value>
+                <dataAdapter></dataAdapter>
+            </content>
+        </contents>
+    </module>
+</viewTemplate>

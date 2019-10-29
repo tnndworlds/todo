@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewTemplate>
+    <module>
+        <name>QTask</name>
+        <contents>
+            <content>
+                <key>data</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT * FROM XS_DD_QTASK WHERE USER_ID = '${userId}' ORDER BY UPDATE_TIME;
+					]]>
+                </value>
+                <dataAdapter></dataAdapter>
+            </content>
+        </contents>
+    </module>
+</viewTemplate>

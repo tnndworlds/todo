@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewTemplate>
+    <module>
+        <name>Strategy</name>
+        <contents>
+            <content>
+                <key>data</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT *, validDay(TYPE, PARAM) AS VALID FROM XS_DD_STRATEGY WHERE USER_ID IN ('${userId}', 'system') ORDER BY USER_ID;
+					]]>
+                </value>
+                <dataAdapter></dataAdapter>
+            </content>
+        </contents>
+    </module>
+</viewTemplate>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewTemplate>
+    <module>
+        <name>Tags</name>
+        <contents>
+            <content>
+                <key>data</key>
+                <sysParam></sysParam>
+                <type>SQL</type>
+                <value>
+                    <![CDATA[
+						SELECT *, TITLE AS text, IF(T2.ID IS NULL,0,1) AS TODO, T2.ID AS punchId  FROM XS_DD_TAG T1
+                        LEFT JOIN xs_dd_punch T2 ON T2.PUNCH_DATE = date_format(now(), '%Y%m%d') AND T1.ID=T2.TASK_ID
+                        WHERE T1.USER_ID='${userId}' ORDER BY T1.VALID DESC;
+					]]>
+                </value>
+                <dataAdapter></dataAdapter>
+            </content>
+        </contents>
+    </module>
+</viewTemplate>
