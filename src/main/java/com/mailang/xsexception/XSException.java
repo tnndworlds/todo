@@ -1,31 +1,30 @@
 package com.mailang.xsexception;
 
-import com.mailang.i18n.I18N;
-
 public class XSException extends RuntimeException
 {
-    private String errCode;
+    private int code;
 
-    private Object[]msgParam;
+    private String msg;
 
-    public XSException(String errCode)
+    public XSException(int code)
     {
-        this.errCode = errCode;
+        this.code = code;
     }
 
-    public XSException(String errCode, Object...msgParam)
+    public XSException(String msg, int code)
     {
-        this.msgParam = msgParam;
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public int getCode()
+    {
+        return code;
     }
 
     @Override
     public String getMessage()
     {
-        return I18N.getXSERRString(errCode, this.msgParam);
-    }
-
-    public String getErrCode()
-    {
-        return this.errCode;
+        return this.msg;
     }
 }

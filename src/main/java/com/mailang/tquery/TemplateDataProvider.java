@@ -164,7 +164,7 @@ public class TemplateDataProvider
 					}
 					catch (Exception e)
 					{
-						throw new XSException(ERRCode.DATA_CONVERT_ERROR, contentBean.getValue(), queryResult);
+						throw new XSException(ERRCode.DATA_CONVERT_ERROR, ERRCode.FAILED);
 					}
 				}
 				return queryResult;
@@ -175,7 +175,7 @@ public class TemplateDataProvider
 				}
 				catch (Exception e)
 				{
-					throw new XSException(ERRCode.JSON_FORMAT_ERROR, contentBean.getValue());
+					throw new XSException(ERRCode.JSON_FORMAT_ERROR, ERRCode.FAILED);
 				}
 			case CODE:
 				try
@@ -185,7 +185,7 @@ public class TemplateDataProvider
 				}
 				catch (Exception e)
 				{
-					throw new XSException(ERRCode.CODE_DATA_ERROR, contentBean.getValue());
+					throw new XSException(ERRCode.CODE_DATA_ERROR, ERRCode.FAILED);
 				}
 			default:
 				return contentBean.getValue();

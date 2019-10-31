@@ -27,7 +27,7 @@ public class UserDao extends AbstractDao<UserEntity>
     {
         if (null != this.queryById(userEntity.getId()))
         {
-            throw new XSException("11000001");
+            throw new XSException(11000001);
         }
         this.save(userEntity);
     }

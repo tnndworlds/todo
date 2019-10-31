@@ -137,7 +137,7 @@ public class TaskMgr
         catch (Exception e)
         {
             rmJob(jobId);
-            throw new XSException("500004");
+            throw new XSException(500004);
         }
 
         return jobId;

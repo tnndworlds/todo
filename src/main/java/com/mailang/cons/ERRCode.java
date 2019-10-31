@@ -1,7 +1,8 @@
 package com.mailang.cons;
 public class ERRCode
 {
-    public static final String SUCCESS = "200";
+    public static final int SUCCESS = 200;
+    public static final int FAILED = -1;
     public static final String UNKNOW_EXCEPTION = "10000001";
     public static final String DATA_CONVERT_ERROR = "20000001";
     public static final String JSON_FORMAT_ERROR = "20000002";

@@ -1,5 +1,6 @@
 package com.mailang.bean.qmodel;
 
+
 import com.mailang.jdbc.entity.UserEntity;
 import com.mailang.user.MapTokenManager;
 
@@ -12,7 +13,7 @@ public class TokenModel
     private String token;
     private Long tokenTime;
     private UserEntity userEntity;
-    private Object userData;
+    private Object userInfo;
 
     public TokenModel()
     {
@@ -80,14 +81,14 @@ public class TokenModel
         return MAX_EXPIRE_TIME;
     }
 
-    public Object getUserData()
+    public Object getUserInfo()
     {
-        return userData;
+        return userInfo;
     }
 
-    public void setUserData(Object userData)
+    public void setUserInfo(Object userInfo)
     {
-        this.userData = userData;
+        this.userInfo = userInfo;
     }
 }
 

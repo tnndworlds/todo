@@ -68,7 +68,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_QUERY_ERROR, this.entityClass.getName(), id);
+			throw new XSException(ERRCode.DB_QUERY_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -81,7 +81,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_QUERY_ERROR, this.entityClass.getName(), qConditionsList.toString());
+			throw new XSException(ERRCode.DB_QUERY_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -102,7 +102,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_SAVE_ERROR, this.entityClass.getName(), dataMap.toString());
+			throw new XSException(ERRCode.DB_SAVE_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -123,7 +123,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_SAVE_ERROR, this.entityClass.getName(), dataMap.toString());
+			throw new XSException(ERRCode.DB_SAVE_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -139,7 +139,7 @@ public abstract class AbstractDao<T>
         }
         catch (Exception e)
         {
-            throw new XSException(ERRCode.DB_UPDATE_ERROR, this.entityClass.getName(), dataMap.toString());
+            throw new XSException(ERRCode.DB_UPDATE_ERROR, ERRCode.FAILED);
         }
     }
 
@@ -155,7 +155,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_UPDATE_ERROR, this.entityClass.getName(), dataMap.toString());
+			throw new XSException(ERRCode.DB_UPDATE_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -179,7 +179,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_QUERY_ERROR, this.entityClass.getName(), qConditionsList.toString());
+			throw new XSException(ERRCode.DB_QUERY_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -226,7 +226,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_SAVE_ERROR, this.entityClass.getName(), id);
+			throw new XSException(ERRCode.DB_SAVE_ERROR, ERRCode.FAILED);
 		}
 	}
 
@@ -241,7 +241,7 @@ public abstract class AbstractDao<T>
 		}
 		catch (Exception e)
 		{
-			throw new XSException(ERRCode.DB_DELETE_ERROR);
+			throw new XSException(ERRCode.FAILED);
 		}
 	}
 }

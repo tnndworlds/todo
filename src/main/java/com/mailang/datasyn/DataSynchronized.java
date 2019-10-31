@@ -34,7 +34,7 @@ public abstract class DataSynchronized
             JSONObject resData = this.getResponse(urlBean, paramMap);
             if (null == resData)
             {
-                throw new XSException("1001");
+                throw new XSException(1001);
             }
 
             //data adapter

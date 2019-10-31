@@ -44,13 +44,13 @@ public class TQuery
         }
         catch (XSException e)
         {
-            retMessage.setCode(e.getErrCode());
+            retMessage.setCode(e.getCode());
             retMessage.setMsg(e.getMessage());
             return retMessage;
         }
         catch (Exception e1)
         {
-            retMessage.setCode(ERRCode.UNKNOW_EXCEPTION);
+            retMessage.setCode(ERRCode.FAILED);
             retMessage.setMsg(Utils.getStackTrace(e1));
             return retMessage;
         }

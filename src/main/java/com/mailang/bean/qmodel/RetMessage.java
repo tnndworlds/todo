@@ -5,7 +5,7 @@ import com.mailang.utils.JSONUtils;
 
 public class RetMessage
 {
-    private String code;
+    private int code;
 
     /**
      * 若为null，在jackson的toString时，不带该标签
@@ -26,12 +26,12 @@ public class RetMessage
         this.msg = msg;
     }
 
-    public String getCode()
+    public int getCode()
     {
         return code;
     }
 
-    public void setCode(String code)
+    public void setCode(int code)
     {
         this.code = code;
     }

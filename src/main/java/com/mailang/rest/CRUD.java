@@ -44,14 +44,14 @@ public class CRUD
         catch (XSException e)
         {
             LOG.error("XSError. Msg: {}.", e.getMessage());
-            retMessage.setCode(e.getErrCode());
+            retMessage.setCode(e.getCode());
             retMessage.setMsg(e.getMessage());
             return retMessage;
         }
         catch (Exception e1)
         {
             LOG.error("Error. Msg: {}.", Utils.getStackTrace(e1));
-            retMessage.setCode(ERRCode.UNKNOW_EXCEPTION);
+            retMessage.setCode(ERRCode.FAILED);
             retMessage.setMsg(Utils.getStackTrace(e1));
             return retMessage;
         }
@@ -77,14 +77,14 @@ public class CRUD
         catch (XSException e)
         {
             LOG.error("XSError. Msg: {}.", e.getMessage());
-            retMessage.setCode(e.getErrCode());
+            retMessage.setCode(e.getCode());
             retMessage.setMsg(e.getMessage());
             return retMessage;
         }
         catch (Exception e1)
         {
             LOG.error("Error. Msg: {}.", Utils.getStackTrace(e1));
-            retMessage.setCode(ERRCode.UNKNOW_EXCEPTION);
+            retMessage.setCode(ERRCode.FAILED);
             retMessage.setMsg(Utils.getStackTrace(e1));
             return retMessage;
         }
@@ -105,14 +105,14 @@ public class CRUD
         catch (XSException e)
         {
             LOG.error("XSError. Msg: {}.", e.getMessage());
-            retMessage.setCode(e.getErrCode());
+            retMessage.setCode(e.getCode());
             retMessage.setMsg(e.getMessage());
             return retMessage;
         }
         catch (Exception e1)
         {
             LOG.error("Error. Msg: {}.", Utils.getStackTrace(e1));
-            retMessage.setCode(ERRCode.UNKNOW_EXCEPTION);
+            retMessage.setCode(ERRCode.FAILED);
             retMessage.setMsg(Utils.getStackTrace(e1));
             return retMessage;
         }
@@ -141,14 +141,14 @@ public class CRUD
         catch (XSException e)
         {
             LOG.error("XSError. Msg: {}.", e.getMessage());
-            retMessage.setCode(e.getErrCode());
+            retMessage.setCode(e.getCode());
             retMessage.setMsg(e.getMessage());
             return retMessage;
         }
         catch (Exception e1)
         {
             LOG.error("Error. Msg: {}.", Utils.getStackTrace(e1));
-            retMessage.setCode(ERRCode.UNKNOW_EXCEPTION);
+            retMessage.setCode(ERRCode.FAILED);
             retMessage.setMsg(Utils.getStackTrace(e1));
             return retMessage;
         }
@@ -175,14 +175,14 @@ public class CRUD
         catch (XSException e)
         {
             LOG.error("XSError. Msg: {}.", e.getMessage());
-            retMessage.setCode(e.getErrCode());
+            retMessage.setCode(e.getCode());
             retMessage.setMsg(e.getMessage());
             return retMessage;
         }
         catch (Exception e1)
         {
             LOG.error("Error. Msg: {}.", Utils.getStackTrace(e1));
-            retMessage.setCode(ERRCode.UNKNOW_EXCEPTION);
+            retMessage.setCode(ERRCode.FAILED);
             retMessage.setMsg(Utils.getStackTrace(e1));
             return retMessage;
         }
